@@ -4,7 +4,7 @@ import Zipcode from '../../components/zipcode/Zipcode';
 import Footer from '../../components/Footer';
 import Photo from '../../components/photo';
 import Map from '../../components/map/Map';
-import '../../styles.css';
+import '../../pages/home/styles.css';
 
 const dummyTitle = "Ever wanted to know how you can get involved? Now you don't have to."
 const dummyAboutInfo = "PROTEST is a crowdsourced application that allows you to figure out how toget involved in a movement or protest near you. If you want to make a change but don't know how to get organized and started, PROTEST is for you."
