@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Formik, useField, Form } from "formik";
 import Header from "../../components/Header";
 import "../../pages/organize/organize.css";
+import "../../services/firebase/index.js";
  
 import * as Yup from "yup";
+import { storage } from "firebase";
  
 const CustomInput = ({ label, className, ...props }) => {
   const [field, meta] = useField(props);
@@ -112,7 +114,10 @@ export default function Organize() {
               resetForm();
               setSubmitting(false);
             }, 3000);
+
           }}
+
+          
         >
           {(props) => (
             <Form onSubmit={props.handleSubmit}>

@@ -1,24 +1,31 @@
 import React from 'react';
+import {Formik, Field, Form} from "formik";
 import './zipcode.css';
 
-const Zipcode = ({onInputChange, onButtonSubmit}) => {
+const Zipcode = ({click}) => {
     return (
-        <div>   
-            <div className='zip-form pa5'>
+        <Formik
+            initialValues={{zip: ""}}
+            onSubmit={async values => {
+                await new Promise(resolve => setTimeout(resolve, 500));
+                let {zip} = values
+                click(zip)
+            }}
+        >   
+            <Form className='zip-form pa5'>
                 <label className='zip f2'>
                     {'Enter your Zip Code'}
                 </label>
-                <input className='input-zip f3 pa2 w-10 br-pill' type='text' onChange={onInputChange}/>
-                <button 
-                    className='zip-button w9 grow f3 link ph3 pv2 dib white bg-black'
-                    onClick={onButtonSubmit}>
+                <Field className='input-zip f3 pa2 w-10 br-pill' type='text' name="zip"/>
+                <button type="submit"
+                    className='zip-button w9 grow f3 link ph3 pv2 dib white bg-black'>
                     Detect
                 </button>
                 <p className='p-zip f4'>
                     {'To find a movement worth getting involved in near you.'}
                 </p>
-            </div>
-        </div>
+            </Form>
+        </Formik>
     );
 }
 

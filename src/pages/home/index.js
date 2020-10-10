@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../../components/Header';
 import Zipcode from '../../components/zipcode/Zipcode';
 import Footer from '../../components/Footer';
@@ -14,11 +14,21 @@ const dummyTitle2 = 'How it works'
 const dummyAboutInfo2 = "Gather a commmunity nearby you to get up and get involved in a movement you feel strongly about. PROTEST allows you to crowdsource information about a new or upcoming protest or movement near you."
 
 export default function Home(){
+  const[mapView, setMapView] = useState(false)
+  const [zip, setZip] = useState(" ")
+
+
+  const handleClick = (zip) => {
+    if (zip !== '') {
+      setMapView(!mapView)
+    }
+    setZip(zip)
+  }
+
   return(
     <div className='container' id='landingPage'>
       <Header />
-      <Zipcode />
-      <Map />
+      {(mapView) ? <Map zip={zip}/> : <Zipcode click={handleClick}/>}
       
       <section class='landingPageInfo'>
         <div class='infoTitle'>
