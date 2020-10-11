@@ -55,7 +55,7 @@ const Map = () => {
                       },
                       'geometry': {
                           'type': 'Point',
-                          'coordinates': [-122.378955, 37.621313]
+                          'coordinates': [-122.4191012, 37.6415356]
                       }
                   },
                   {
@@ -67,7 +67,7 @@ const Map = () => {
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-122.378955, 37.721313]
+                        'coordinates': [-122.3989636, 37.6268449]
                     }
                 },
                 {
@@ -79,9 +79,59 @@ const Map = () => {
                   },
                   'geometry': {
                       'type': 'Point',
-                      'coordinates': [-122.378955, 37.821313]
+                      'coordinates': [-122.4026478, 37.7902683]
                   }
               },
+              {
+                'type': 'Feature',
+                'properties': {
+                  "name": "March for Breonna Taylor",
+                  "description": "Come out and march for Breonna at Town Hall. Protest No Knock Warrants."
+                
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-122.4139323, 37.7563358]
+                }
+            },
+            {
+              'type': 'Feature',
+              'properties': {
+                "name": "March for Breonna Taylor",
+                "description": "Come out and march for Breonna at Town Hall. Protest No Knock Warrants."
+              
+              },
+              'geometry': {
+                  'type': 'Point',
+                  'coordinates': [-122.4142852, 37.7596273]
+              }
+          },
+          {
+            'type': 'Feature',
+            'properties': {
+              "name": "March for Breonna Taylor",
+              "description": "Come out and march for Breonna at Town Hall. Protest No Knock Warrants."
+            
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-122.4299063, 37.772926]
+            }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            "name": "March for Breonna Taylor",
+            "description": "Come out and march for Breonna at Town Hall. Protest No Knock Warrants."
+          
+          },
+          'geometry': {
+              'type': 'Point',
+              'coordinates': [-122.4399063, 37.772926]
+          }
+      },
+           
+              
                 
               ]
           }
